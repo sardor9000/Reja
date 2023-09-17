@@ -1,4 +1,7 @@
-/ Module package CORE
+// / Module package CORE
+// Core packagelar node.js ni ichida boladi va biz alohida install qilishimiz shart emas 
+
+// const { default: inquirer } = require("inquirer");
 
 // Core modullar bizga node.js ni ichiga ustanovka qilib berilgan boladi.
 // misol uchun: setTimeout(), setInterval()......
@@ -25,9 +28,6 @@
 
 
 
-
-
-
 // buyerda biz packageni chaqiryapmiz
 // fs => file system buni ichida birqancha methodlar bor
 // const fs = require('fs');
@@ -42,8 +42,51 @@
 // console.log(new_data)
 
 
+
+
+
+
+
+
+
 // Node.js is combination of (JS && V8 && LibUV);
 
+// MODULE package EXTERNAL
+// External packagelarni biz npm install orqali ornatamiz va require orqali chaqirib olamiz
+
+
+
+
+
+// MOMENT 
+
+
+// const moment = require('moment');
+// setInterval(()=> {
+//     const time = moment().format();
+//     console.log(`hozirgi vaqt: ${time}`);
+// }, 3000)
+
+
+// VALIDATOR
+
+// const validator = require('validator')
+// const test = validator.isEmail('foo@bar.com')
+// const test = validator.isIP('114.200.35.154')
+// console.log('test:', test);
+
+
+// UUID
+// takrorlanmaydigan random stringlarni bizga xosil qilib beradi
+// const {v4: uuidv4 } = require('uuid')
+// const random = uuidv4();
+// console.log('random', random);
+
+
+// CHALK
+// const chalk = require('chalk')
+// const log = console.log;
+// log(chalk.red(`uuid creates`) + random + chalk.red('!'));
 
 
 
@@ -51,10 +94,18 @@
 
 
 
+// FILE MODULES
+
+const calculate = require('./hisob.js')
+
+const natija  = calculate.kopaytirish(80, 20)
+console.log('natija', natija);
+console.log('============');
+
+const natija2 = calculate.qoshish(70, 20)
+console.log('natija', natija2)
+
+const natija3 = calculate.ayrish(90,30);
+console.log('natija', natija3);
 
 
-
-
-
-// Module package EXTERNAL
-// Module package FILE

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js",
+    "train": "nodemon train.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/sardor9000/Reja/issues"
   },
-  "homepage": "https://github.com/sardor9000/Reja#readme"
+  "homepage": "https://github.com/sardor9000/Reja#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^9.2.11",
+    "moment": "^2.29.4",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0"
+  }
 }
