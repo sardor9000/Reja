@@ -1,0 +1,21 @@
+{
+  "name": "reja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/sardor9000/Reja.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sardor9000/Reja/issues"
+  },
+  "homepage": "https://github.com/sardor9000/Reja#readme"
+}
