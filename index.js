@@ -1,6 +1,8 @@
 // / Module package CORE
 // Core packagelar node.js ni ichida boladi va biz alohida install qilishimiz shart emas 
 
+// const { default: inquirer } = require("inquirer")
+
 // const { default: inquirer } = require("inquirer");
 
 // Core modullar bizga node.js ni ichiga ustanovka qilib berilgan boladi.
@@ -43,7 +45,25 @@
 
 
 
+// OS
 
+// console.log("CORE PACKAGE");
+
+// let os = require('os');
+// console.log("Platform:" + os.platform());
+// console.log("Architec:" + os.arch);
+
+
+// PATH
+
+// const path = require("path")
+// const filename = path.extname('/Users/sardorahmadullayev/Desktop/Example/Reja/index.js')
+// console.log(filename);
+
+
+// CORE OBJ
+
+// console.log("process", process.version);
 
 
 
@@ -94,18 +114,35 @@
 
 
 
+
+
 // FILE MODULES
 
-const calculate = require('./hisob.js')
+// const calculate = require('./hisob.js')
 
-const natija  = calculate.kopaytirish(80, 20)
-console.log('natija', natija);
-console.log('============');
+// const natija  = calculate.kopaytirish(80, 20)
+// console.log('natija', natija);
+// console.log('============');
 
-const natija2 = calculate.qoshish(70, 20)
-console.log('natija', natija2)
+// const natija2 = calculate.qoshish(70, 20)
+// console.log('natija', natija2)
 
-const natija3 = calculate.ayrish(90,30);
-console.log('natija', natija3);
+// const natija3 = calculate.ayrish(90,30);
+// console.log('natija', natija3);
 
 
+const Account = require("./accaount")
+Account.tellMeAboutClass();
+Account.tellMeTime();
+
+
+console.log('=================');
+
+const myAccount = new Account('Sardor', 200000, 97549537859);
+myAccount.giveMeDetails()   
+
+myAccount.makeDeposit(1000000)
+
+// ferrari usd
+myAccount.withdrawMoney(400000)
+myAccount.makeDeposit(200000)
