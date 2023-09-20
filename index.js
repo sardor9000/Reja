@@ -131,18 +131,18 @@
 // console.log('natija', natija3);
 
 
-const Account = require("./accaount")
-Account.tellMeAboutClass();
-Account.tellMeTime();
+// const Account = require("./accaount")
+// Account.tellMeAboutClass();
+// Account.tellMeTime();
 
 
-console.log('=================');
+// console.log('=================');
 
-const myAccount = new Account('Sardor', 200000, 97549537859);
-myAccount.giveMeDetails()   
+// const myAccount = new Account('Sardor', 200000, 97549537859);
+// myAccount.giveMeDetails()   
 
-myAccount.makeDeposit(1000000)
+// myAccount.makeDeposit(1000000)
 
-// ferrari usd
-myAccount.withdrawMoney(400000)
-myAccount.makeDeposit(200000)
+// // ferrari usd
+// myAccount.withdrawMoney(400000)
+// myAccount.makeDeposit(200000)
