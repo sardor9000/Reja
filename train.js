@@ -30,3 +30,6 @@ maslahatBering(65, (err, data) =>{
 });
 
 console.log("passed here 1");
+
+
+
