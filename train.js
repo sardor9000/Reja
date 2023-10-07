@@ -46,16 +46,16 @@
 
 
 
-const bolish = (a, b, callback) => {
-    if(b==0) callback('Mahraj nolga teng bololmaydi', null)
-    else callback (null, a / b)
-}
+// const bolish = (a, b, callback) => {
+//     if(b==0) callback('Mahraj nolga teng bololmaydi', null)
+//     else callback (null, a / b)
+// }
 
 
-bolish(10, 2, (err, data) =>{
-    if(err) console.log("ERROR:", err);
-    else console.log("Result:", data);
-})
+// bolish(10, 2, (err, data) =>{
+//     if(err) console.log("ERROR:", err);
+//     else console.log("Result:", data);
+// })
 
 
 

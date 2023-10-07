@@ -2,20 +2,11 @@ console.log("web server ishlayapti");
 const express = require("express");
 const app = express();
 
-// const fs = require("fs");
-
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) => {
-//     if(err){
-//         console.log("ERROR:", err);
-//     }else{
-//         user = JSON.parse(data)
-//     }
-// }); 
 
 // MongoDB calling
 
 const db = require("./server").db();
+const mongodb = require("mongodb")
 
 
 
@@ -38,15 +29,40 @@ app.post("/create-item", (req, res) => {
     console.log(req.body);
     const new_reja = req.body.reja;
     db.collection('plans').insertOne({reja: new_reja}, (err, data) =>{
-       res.json(data.ops[0])
-    })
-   // code
+       res.json(data.ops[0]);
+    });
 })
 
 
-app.get("/author", (req, res)=>{
-    // res.render("author", {user: user} )
-    // todo: code here
+app.post("/delete-item", (req, res) =>{
+    const id = req.body.id;
+    db.collection("plans").deleteOne(
+        {_id: new mongodb.ObjectId(id) },
+        function(err, data){
+        res.json({state: "success"})
+    });
+})
+
+
+app.post("/delete-all", (req, res) => {
+    if(req.body.delete_all){
+        db.collection("plans").deleteMany(function () {
+            res.json({state: "hamma rejalar ochirildi"});
+        });
+    };
+});
+
+
+app.post("/edit-item", (req, res) => {
+    const data = req.body;
+    console.log(data);
+    db.collection("plans").findOneAndUpdate(
+        {_id: new mongodb.ObjectId(data.id)}, 
+        {$set: {reja: data.new_input}}, 
+        function(err, data){
+        res.json({state: "success"})
+      }
+    );
 });
 
 
@@ -62,7 +78,7 @@ app.get("/", function (req, res){
             res.render('reja', {items: data});
         }
     });
-});
+});  
 
 module.exports = app;
 
