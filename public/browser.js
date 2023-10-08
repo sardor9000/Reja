@@ -89,5 +89,7 @@ document.getElementById("clean-all").addEventListener("click", function(){
     axios.post("/delete-all", {delete_all: true}).then(response => {
         alert(response.data.state);
         document.location.reload()
+        // let listItem = document.getElementById("list-item"); // list-itemning id-sini o'zgartiring
+        // listItem.parentNode.removeChild(listItem); // list-itemni o'chirish
     })
-})
+}) 
